@@ -1,0 +1,401 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://rsms.me/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<style>
+    :root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
+</style>
+<div class="antialiased bg-black w-full min-h-screen text-slate-300 relative py-4">
+    <div class="grid grid-cols-12 mx-auto gap-2 sm:gap-4 md:gap-6 lg:gap-10 xl:gap-14 max-w-7xl my-10 px-2">
+        <div id="menu" class="bg-white/10 col-span-3 rounded-lg p-4 ">
+            <img src="{% static 'images/logo.jpg' %}" class="w-auto h-30 rounded-lg"><br>
+            <hr class="border-slate-700">
+            <p class="text-slate-400 pt-4 text-3xl mb-2 font-bold text-white uppercase">ACU schools</p>
+            <p class="text-slate-400 text-xl mb-2 uppercase">amity university chhattisgarh</p>
+           <!-- <a href="#" class="flex flex-col space-y-2 md:space-y-0 md:flex-row mb-5 items-center md:space-x-2 hover:bg-white/10 group transition duration-150 ease-linear rounded-lg group w-full py-3 px-2"></a>-->
+           
+                <!--<div>
+                    <img class="rounded-full w-10 h-10 relative object-cover" src="https://img.freepik.com/free-photo/no-problem-concept-bearded-man-makes-okay-gesture-has-everything-control-all-fine-gesture-wears-spectacles-jumper-poses-against-pink-wall-says-i-got-this-guarantees-something_273609-42817.jpg?w=1800&t=st=1669749937~exp=1669750537~hmac=4c5ab249387d44d91df18065e1e33956daab805bee4638c7fdbf83c73d62f125" alt="">
+                </div>
+                <div>
+                    <p class="font-medium group-hover:text-indigo-400 leading-4">Jim Smith</p>
+                    <span class="text-xs text-slate-400">Pantazi LLC</span>
+                </div> -->
+            </a>
+            <hr class="my-2 border-slate-700">
+            <div id="menu" class="flex flex-col space-y-2 my-5">
+                <a href="#" class="hover:bg-white/10 transition duration-150 ease-linear rounded-lg py-3 px-2 group">
+                    <div class="flex flex-col space-y-2 md:flex-row md:space-y-0 space-x-2 items-center">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 group-hover:text-indigo-400">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                              </svg>
+                              
+                        </div>
+                        <div>
+                        <p class="font-bold text-base lg:text-lg text-slate-200 leading-4 group-hover:text-indigo-400">Schools</p>
+                        <p class="text-slate-400 text-sm hidden md:block">School Overview</p>
+                        </div>
+                        
+                    </div>
+                </a>
+                <a href="/resume" class="hover:bg-white/10 transition duration-150 ease-linear rounded-lg py-3 px-2 group">
+                    <div class="relative flex flex-col space-y-2 md:flex-row md:space-y-0 space-x-2 items-center">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 group-hover:text-indigo-400">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                              </svg>                              
+                        </div>
+                        <div>
+                            <p class="font-bold text-base lg:text-lg text-slate-200 leading-4 group-hover:text-indigo-400">Resume</p>
+                        <p class="text-slate-400 text-sm hidden md:block">Manage Resume</p>
+                        </div>
+                        <div class="absolute -top-3 -right-3 md:top-0 md:right-0 px-2 py-1.5 rounded-full bg-indigo-800 text-xs font-mono font-bold">10+</div>
+                    </div>
+                </a>
+                <a href="/faculty" class="hover:bg-white/10 transition duration-150 ease-linear rounded-lg py-3 px-2 group">
+                    <div class="flex flex-col space-y-2 md:flex-row md:space-y-0 space-x-2 items-center">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 group-hover:text-indigo-400">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                              </svg>                              
+                        </div>
+                        <div>
+                            <p class="font-bold text-base lg:text-lg text-slate-200 leading-4 group-hover:text-indigo-400">Faculty</p>
+                        <p class="text-slate-400 text-sm hidden md:block">Manage Faculty</p>
+                        </div>
+                        
+                    </div>
+                </a>
+                <a href="#" class="hover:bg-white/10 transition duration-150 ease-linear rounded-lg py-3 px-2 group">
+                    <div class="flex flex-col space-y-2 md:flex-row md:space-y-0 space-x-2 items-center">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 group-hover:text-indigo-400">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                                
+                        </div>
+                        <div>
+                            <p class="font-bold text-base lg:text-lg text-slate-200 leading-4 group-hover:text-indigo-400">Settings</p>
+                        <p class="text-slate-400 text-sm hidden md:block">Edit settings</p>
+                        </div>
+                        
+                    </div>
+                </a>
+            </div>
+            <hr class=" mt-1 border-slate-700">
+
+
+            <!--Section - Main - Body - This Shows the Details - Chart and Info About Staff In Particular School-->
+            <p class=" mt-2 text-sm text-center text-gray-600">Palash Verma | Rishab Mahajan | Amity University | &copy; 2023</p>
+            <hr class="mt-2 border-slate-700">
+        </div>
+
+
+
+
+        <div id="content" class="bg-white/10 col-span-9 rounded-lg p-6">
+            <div id="24h">
+                <h1 class="font-bold py-4 uppercase text-white text-xl text-center">SCHOOLS</h1>
+                <div id="stats" class="grid gird-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-5">
+                
+                    <a href='/dashboardABS' ><div class="bg-black/60 to-white/5 p-6 rounded-lg hover:bg-zinc-700 ease-in duration-150">
+                        <div class="flex flex-row space-x-4 items-center text-center">
+                            
+                            <div>
+                                <p class="text-amber-400 text-l font-medium uppercase leading-4">AMITY BUSINESS SCHOOL</p>
+                                <p class="text-white font-bold text-4xl inline-flex items-center space-x-2 pt-3">
+                                    <span id="pfdata">ABS</span>
+                                    
+                                </p>
+                                <div>
+                                    <p class="text-blue-400 mt-8 text-sm font-medium uppercase leading-4">Present Faculty</p>
+                                    <p class="text-white font-bold text-l inline-flex items-center space-x-2">
+                                        <span id="pfdata">{{ specific_entries.entry_1.deficiency }}</span>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-square-fill" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z" id="mainIconPathAttribute" fill="#60a5fa"></path> </svg>
+                                              
+                                        </span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="text-teal-300 mt-2 text-sm font-medium uppercase leading-4">Required Faculty</p>
+                                    <p class="text-white font-bold text-l inline-flex items-center space-x-2">
+                                        <span>{{ specific_entries.entry_1.faculties_required }}</span>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" id="mainIconPathAttribute" fill="#5eead4"></path> </svg>
+                                            
+                                              
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div></a>
+
+
+
+                    <a href='/dashboardASL' ><div class="bg-black/60 to-white/5 p-6 rounded-lg hover:bg-zinc-700 ease-in duration-150">
+                        <div class="flex flex-row space-x-4 items-center text-center">
+                            
+                            <div>
+                                <p class="text-amber-400 text-sm font-medium uppercase leading-4">AMITY SCHOOL OF LANGUAGES</p>
+                                <p class="text-white font-bold text-4xl inline-flex items-center space-x-2 pt-3">
+                                    <span id="pfdata">ASL</span>
+                                    
+                                </p>
+                                <div>
+                                    <p class="text-blue-400 mt-8 text-sm font-medium uppercase leading-4">Present Faculty</p>
+                                    <p class="text-white font-bold text-l inline-flex items-center space-x-2">
+                                        <span id="pfdata">{{ specific_entries.entry_6.deficiency }}</span>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-square-fill" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z" id="mainIconPathAttribute" fill="#60a5fa"></path> </svg>
+                                              
+                                        </span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="text-teal-300 mt-2 text-sm font-medium uppercase leading-4">Required Faculty</p>
+                                    <p class="text-white font-bold text-l inline-flex items-center space-x-2">
+                                        <span>{{ specific_entries.entry_6.faculties_required }}</span>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" id="mainIconPathAttribute" fill="#5eead4"></path> </svg>
+                                            
+                                              
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div></a>
+
+
+
+                    <a href='/dashboardAIB' ><div class="bg-black/60 to-white/5 p-6 rounded-lg hover:bg-zinc-700 ease-in duration-150">
+                        <div class="flex flex-row space-x-4 items-center text-center">
+                            
+                            <div>
+                                <p class="text-amber-400 text-sm font-medium uppercase leading-4">AMITY SCHOOL OF BIOTECHNOLOGY</p>
+                                <p class="text-white font-bold text-4xl inline-flex items-center space-x-2 pt-3">
+                                    <span id="pfdata">AIB</span>
+                                    
+                                </p>
+                                <div>
+                                    <p class="text-blue-400 mt-8 text-sm font-medium uppercase leading-4">Present Faculty</p>
+                                    <p class="text-white font-bold text-l inline-flex items-center space-x-2">
+                                        <span id="pfdata">{{ specific_entries.entry_3.deficiency }}</span>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-square-fill" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z" id="mainIconPathAttribute" fill="#60a5fa"></path> </svg>
+                                              
+                                        </span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="text-teal-300 mt-2 text-sm font-medium uppercase leading-4">Required Faculty</p>
+                                    <p class="text-white font-bold text-l inline-flex items-center space-x-2">
+                                        <span>{{ specific_entries.entry_3.faculties_required }}</span>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" id="mainIconPathAttribute" fill="#5eead4"></path> </svg>
+                                            
+                                              
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div></a>
+
+
+                    <a href='/dashboardALS'><div class="bg-black/60 to-white/5 p-6 rounded-lg hover:bg-zinc-700 ease-in duration-150">
+                        <div class="flex flex-row space-x-4 items-center text-center">
+                            
+                            <div>
+                                <p class="text-amber-400 text-sm font-medium uppercase leading-4">AMITY SCHOOL OF LAW</p>
+                                <p class="text-white font-bold text-4xl inline-flex items-center space-x-2 pt-3">
+                                    <span id="pfdata">ALS</span>
+                                    
+                                </p>
+                                <div>
+                                    <p class="text-blue-400 mt-8 text-sm font-medium uppercase leading-4">Present Faculty</p>
+                                    <p class="text-white font-bold text-l inline-flex items-center space-x-2">
+                                        <span id="pfdata">{{ specific_entries.entry_4.deficiency }}</span>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-square-fill" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z" id="mainIconPathAttribute" fill="#60a5fa"></path> </svg>
+                                              
+                                        </span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="text-teal-300 mt-2 text-sm font-medium uppercase leading-4">Required Faculty</p>
+                                    <p class="text-white font-bold text-l inline-flex items-center space-x-2">
+                                        <span>{{ specific_entries.entry_4.faculties_required }}</span>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" id="mainIconPathAttribute" fill="#5eead4"></path> </svg>
+                                            
+                                              
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div></a>
+
+
+                    <a href='/dashboardASAP'><div class="bg-black/60 to-white/5 p-6 rounded-lg hover:bg-zinc-700 ease-in duration-150">
+                        <div class="flex flex-row space-x-4 items-center text-center">
+                            
+                            <div>
+                                <p class="text-amber-400 text-sm font-medium uppercase leading-4">AMITY SCHOOL OF ARCHITECTURE & PLANNING</p>
+                                <p class="text-white font-bold text-4xl inline-flex items-center space-x-2 pt-3">
+                                    <span id="pfdata">ASAP</span>
+                                    
+                                </p>
+                                <div>
+                                    <p class="text-blue-400 mt-8 text-sm font-medium uppercase leading-4">Present Faculty</p>
+                                    <p class="text-white font-bold text-l inline-flex items-center space-x-2">
+                                        <span id="pfdata">{{ specific_entries.entry_5.deficiency }}</span>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-square-fill" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z" id="mainIconPathAttribute" fill="#60a5fa"></path> </svg>
+                                              
+                                        </span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="text-teal-300 mt-2 text-sm font-medium uppercase leading-4">Required Faculty</p>
+                                    <p class="text-white font-bold text-l inline-flex items-center space-x-2">
+                                        <span>{{ specific_entries.entry_5.faculties_required }}</span>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" id="mainIconPathAttribute" fill="#5eead4"></path> </svg>
+                                            
+                                              
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div></a>
+
+
+                    <a href='/dashboardASCO'><div class="bg-black/60 to-white/5 p-6 rounded-lg hover:bg-zinc-700 ease-in duration-150">
+                        <div class="flex flex-row space-x-4 items-center text-center">
+                            
+                            <div>
+                                <p class="text-amber-400 text-sm font-medium uppercase leading-4">AMITY SCHOOL OF MASS COMMUNICATION</p>
+                                <p class="text-white font-bold text-4xl inline-flex items-center space-x-2 pt-3">
+                                    <span id="pfdata">ASCO</span>
+                                    
+                                </p>
+                                <div>
+                                    <p class="text-blue-400 mt-8 text-sm font-medium uppercase leading-4">Present Faculty</p>
+                                    <p class="text-white font-bold text-l inline-flex items-center space-x-2">
+                                        <span id="pfdata">{{ specific_entries.entry_7.deficiency }}</span>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-square-fill" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z" id="mainIconPathAttribute" fill="#60a5fa"></path> </svg>
+                                              
+                                        </span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="text-teal-300 mt-2 text-sm font-medium uppercase leading-4">Required Faculty</p>
+                                    <p class="text-white font-bold text-l inline-flex items-center space-x-2">
+                                        <span>{{ specific_entries.entry_7.faculties_required }}</span>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" id="mainIconPathAttribute" fill="#5eead4"></path> </svg>
+                                            
+                                              
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div></a>
+
+
+                    <a href='/dashboardASFT'><div class="bg-black/60 to-white/5 p-6 rounded-lg hover:bg-zinc-700 ease-in duration-150">
+                        <div class="flex flex-row space-x-4 items-center text-center">
+                            
+                            <div>
+                                <p class="text-amber-400 text-sm font-medium uppercase leading-4">AMITY SCHOOL OF FASHION TECHNOLOGY</p>
+                                <p class="text-white font-bold text-4xl inline-flex items-center space-x-2 pt-3">
+                                    <span id="pfdata">ASFT</span>
+                                    
+                                </p>
+                                <div>
+                                    <p class="text-blue-400 mt-8 text-sm font-medium uppercase leading-4">Present Faculty</p>
+                                    <p class="text-white font-bold text-l inline-flex items-center space-x-2">
+                                        <span id="pfdata">{{ specific_entries.entry_8.deficiency }}</span>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-square-fill" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z" id="mainIconPathAttribute" fill="#60a5fa"></path> </svg>
+                                              
+                                        </span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="text-teal-300 mt-2 text-sm font-medium uppercase leading-4">Required Faculty</p>
+                                    <p class="text-white font-bold text-l inline-flex items-center space-x-2">
+                                        <span>{{ specific_entries.entry_8.faculties_required }}</span>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" id="mainIconPathAttribute" fill="#5eead4"></path> </svg>
+                                            
+                                              
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div></a>
+
+
+                    <a href='/dashboardAIITASET'><div class="bg-black/60 to-white/5 p-6 rounded-lg hover:bg-zinc-700 ease-in duration-150">
+                        <div class="flex flex-row space-x-4 items-center text-center">
+                            
+                            <div>
+                                <p class="text-amber-400 text-sm font-medium uppercase leading-4">AMITY SCHOOL OF ENGINEERING / INFO TECH</p>
+                                <p class="text-white font-bold text-2xl inline-flex items-center space-x-2 pt-3">
+                                    <span id="pfdata">ASET / AIIT</span>
+                                    
+                                </p>
+                                <div>
+                                    <p class="text-blue-400 mt-8 text-sm font-medium uppercase leading-4">Present Faculty</p>
+                                    <p class="text-white font-bold text-l inline-flex items-center space-x-2">
+                                        <span id="pfdata">{{ specific_entries.entry_2.deficiency }}</span>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-square-fill" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z" id="mainIconPathAttribute" fill="#60a5fa"></path> </svg>
+                                              
+                                        </span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="text-teal-300 mt-4 text-sm font-medium uppercase leading-4">Required Faculty</p>
+                                    <p class="text-white font-bold text-l inline-flex items-center space-x-2">
+                                        <span>{{ specific_entries.entry_2.faculties_required }}</span>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" id="mainIconPathAttribute" fill="#5eead4"></path> </svg>
+                                            
+                                              
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/script.js'%}"></script>
+</body>
+</html>                         
